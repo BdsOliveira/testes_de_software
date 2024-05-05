@@ -1,0 +1,21 @@
+{
+    "name": "bdsoliveira/testes_de_software",
+    "description": "Introdução a Testes de Software com PHP e PHPUnit",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^11.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Bdsoliveira\\TestesDeSoftware\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bruno Oliveira",
+            "email": "bds.commus@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -5,27 +5,27 @@ namespace Tests\Unit\BaseMath;
 use App\Core\Math;
 use Tests\BaseTestCase;
 
-class SumTest extends BaseTestCase
+class MathTest extends BaseTestCase
 {
     private Math $math;
     public function setUp(): void
     {
         $this->math = new Math();
     }
-    public function testSumReturnsCorrectValue()
+    public function testSumReturnsCorrectValue(): void
     {
         $this->assertEquals(5, $this->math->add(3, 2));
         $this->assertEquals(-1, $this->math->add(-3, 2));
         $this->assertNotEquals(5, $this->math->add(3, -2));
     }
-    public function testSubtractReturnsCorrectValue()
+    public function testSubtractReturnsCorrectValue(): void
     {
         $this->assertEquals(1, $this->math->subtract(3, 2));
         $this->assertEquals(5, $this->math->subtract(3, -2));
         $this->assertNotEquals(5, $this->math->subtract(3, 3));
     }
 
-    public function testMultiplyReturnsCorrectValue()
+    public function testMultiplyReturnsCorrectValue(): void
     {
         $this->assertEquals(6, $this->math->multiply(2, 3));
         $this->assertEquals(-6, $this->math->multiply(3, -2));
@@ -33,7 +33,7 @@ class SumTest extends BaseTestCase
         $this->assertNotEquals(6, $this->math->multiply(2, 2));
     }
 
-    public function testDivideReturnsCorrectValue()
+    public function testDivideReturnsCorrectValue(): void
     {
         $this->assertEquals(2, $this->math->divide(6, 3));
         $this->assertEquals(-2, $this->math->divide(6, -3));
@@ -41,7 +41,7 @@ class SumTest extends BaseTestCase
         $this->assertNotEquals(2, $this->math->divide(6, 2));
     }
 
-    public function testPowerReturnsCorrectValue()
+    public function testPowerReturnsCorrectValue(): void
     {
         $this->assertEquals(8, $this->math->power(2, 3));
         $this->assertEquals(1, $this->math->power(2, 0));
@@ -49,7 +49,7 @@ class SumTest extends BaseTestCase
         $this->assertNotEquals(8, $this->math->power(2, 2));
     }
 
-    public function testSquareRootReturnsCorrectValue()
+    public function testSquareRootReturnsCorrectValue(): void
     {
         $this->assertEquals(2, $this->math->sqrt(4));
         $this->assertEquals(0, $this->math->sqrt(0));

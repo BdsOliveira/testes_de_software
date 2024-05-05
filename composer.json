@@ -8,7 +8,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Bdsoliveira\\TestesDeSoftware\\": "src/"
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
         }
     },
     "authors": [
@@ -20,6 +25,6 @@
     "require": {},
     "scripts": {
         "serve": "php -S localhost:8080 -t public",
-        "test": "./vendor/bin/phpunit --testdox"
+        "test": "./vendor/bin/phpunit --colors --testdox"
     }
 }

@@ -56,17 +56,23 @@ class BhaskaraTest extends BaseTestCase
 
         $bhaskara = new Bhaskara(2, 3, 2);
         $this->assertEquals(-7, $bhaskara->calculateDelta());
-    }
 
+        $bhaskara = new Bhaskara(0, 3, 2);
+        $this->assertEquals(9, $bhaskara->calculateDelta());
+    }
+    
     public function testSolutionsCalculationIsCorrect(): void
     {
         $bhaskara = new Bhaskara(1, 3, -4);
         $this->assertEquals([1, -4], $bhaskara->calculateSolutions());
-
+        
         $bhaskara = new Bhaskara(2, 3, 2);
         $this->assertEquals([], $bhaskara->calculateSolutions());
-
+        
         $bhaskara = new Bhaskara(1, 2, 1);
         $this->assertEquals([-1], $bhaskara->calculateSolutions());
+
+        $bhaskara = new Bhaskara(0, 3, 2);
+        $this->assertEquals([0], $bhaskara->calculateSolutions());
     }
 }

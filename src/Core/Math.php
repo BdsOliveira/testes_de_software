@@ -21,7 +21,7 @@ class Math
 
     public function divide($a, $b)
     {
-        if ($b === 0) {
+        if (floatval($b) === floatval(0)) {
             return 0;
         }
         return $a / $b;
